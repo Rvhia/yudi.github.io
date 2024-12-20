@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="w3.css">
+	<div class="w3-container">
+    <title>Yudi Sulaeman Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        section {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section.active {
+            display: block;
+        }
+        .profile-pic {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #4CAF50;
+        }
+        .skills ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('about'); // Show About section by default
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>YUDI SULAEMAN</h1>
+		<h2>Transportation Supervisor</h2>
+        <nav>
+            <a onclick="showSection('about')">About Me</a>
+            <a onclick="showSection('projects')">Projects</a>
+            <a onclick="showSection('skills')">Skills</a>
+            <a onclick="showSection('contact')">Contact</a>
+			<a onclick="showSection('experience')">Experience</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="profile-pic">
+                <img src="3.png" alt="Profile Picture">
+            </div>
+            <p>Hello! My name is Yudi Sulaeman, i'am graduate of SMA Pahlawan Toha Bandung class of 2006 who is dedicated, enthusiastic and highly motivated, with a strong desire to develop in the professional world. I also have work experience in the distribution sector, especially goods delivery.</p>
+			<a onclick="showSection('cv')"><input type="button" class="w3-button w3-green w3-round-large" value="Curriculum Vitae"></a>
+			<a onclick="showSection('projects')"><input type="button" class="w3-button w3-green w3-round-large" value="Next"></a>
+		</section>
+		
+		<section id="cv">
+			<img src="cv.jpg" width="100%">
+			<a onclick="showSection('about')"><input type="button" class="w3-button w3-green w3-round-large" value="Back"></a>
+		</section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Shipping cost optimization program</strong> - Reducing external vendor shipping costs and other costs.
+                </li>
+                <li>
+                    <strong>Estimated time of arrival</strong> - 100% delivery accuracy.
+                </li>
+                <li>
+                    <strong>Route optimization</strong> - Merging routes of two regions into one.
+                </li>
+            </ul>
+			<a onclick="showSection('about')"><input type="button" class="w3-button w3-green w3-round-large" value="Back"></a>
+			<a onclick="showSection('skills')"><input type="button" class="w3-button w3-green w3-round-large" value="Next"></a>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Leadership</li>
+                <li>Problem-Solving</li>
+                <li>Proficient in Transportation Management Systems and Transportation Safety</li>
+                <li>Skilled in operating Microsoft Office, including Excel and Word</li>
+                <li>Effective communication skills</li>
+				<li>Ability to multitask and work effectively in dynamic environments</li>
+				<li>Data Analysis for Cost Efficiency</li>
+            </ul>
+			<a onclick="showSection('projects')"><input type="button" class="w3-button w3-green w3-round-large" value="Back"></a>
+			<a onclick="showSection('contact')"><input type="button" class="w3-button w3-green w3-round-large" value="Next"></a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you’d like to get in touch, feel free to email me at <b>yudisulaeman971@gmail.com</b> or <b>yudisulaeman87@outlook.co.id</b><br> or connect with me on <a href="https://www.linkedin.com/in/yudi-sulaeman-5223b02b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>.</p>
+			<a onclick="showSection('skills')"><input type="button" class="w3-button w3-green w3-round-large" value="Back"></a>
+			<a onclick="showSection('experience')"><input type="button" class="w3-button w3-green w3-round-large" value="Next"></a>
+		</section>
+		
+		<section id="experience">
+			<h2>Experience</h2>
+			<ul>
+                <li>
+                    <strong>PT. Coca Cola Distribussindo Indonesia <br>Bandung November 2007 s/d Maret 2013</br></strong> - Dimulai dengan menjadi helper.<br>- Menjadi Deliveryman.</br>- Menjadi Salesman.
+                </li>
+				<p>
+				<li>
+					<strong>PT.Sumber Alfaria Trijaya Tbk<br>Bandung Juni 2013 s/d September 2013</br></strong> - Menjadi Driver pengiriman ke outlet” Alfa SeJawa Barat.
+				</li>
+				</p>
+				<p>
+				<li>
+					<strong>PT.Enseval Putera Megatrading Tbk<br>Oktober 2013 s/d Mei 2024</br></strong> - Driver, Bandung November 2013 s/d Oktober2020.<br>- Coordinator Transportation, Bandung November
+2020 s/d Mei 2021.<br>- Coordinator Transportation , Bengkulu Juni 2021 s/d April 2022.<br>- Transportation SPV , Pematangsiantar Mei 2022
+s/d Oktober 2023.<br>- Transportation SPV , Pekanbaru Oktober 2023 s/d Mei 2024.</br>
+				</li>
+				</p>
+				<p>
+				<li>
+					<strong>PT.Spil Toll Indonesia<br>Penempatan Pt.Linde Indonesia Karawang<br>Juni 2024 s/d November 2024</br></strong>- Dispatcher
+				</li>
+			</ul>
+			<a onclick="showSection('contact')"><input type="button" class="w3-button w3-green w3-round-large" value="Back"></a>
+			<a onclick="showSection('about')"><input type="button" class="w3-button w3-green w3-round-large" value="Home"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yudi Sulaeman. All Rights Reserved. Designed with NotePad++.</p>
+    </footer>
+</body>
+</html>
